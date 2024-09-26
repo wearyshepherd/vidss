@@ -5,7 +5,7 @@
     box-sizing: border-box;
   }
   
-  /* Set background and font styles */
+  /* General body styling */
   body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
@@ -13,65 +13,83 @@
     text-align: center;
   }
   
-  header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
+  /* Home Section Styling */
+  .home-section {
+    margin-bottom: 50px;
   }
   
-  header h1 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-  }
-  
-  /* Flexbox layout for the photos and title */
-  .photo-gallery {
-    display: flex;
-    justify-content: center;
+  .home-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 20px;
     align-items: center;
-    gap: 20px; /* Space between elements */
+    justify-content: center;
   }
   
-  /* Style for photos */
   .photo img {
     width: 100%;
-    max-width: 300px;
     height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
   
-  /* Style for the title in the center */
-  .title h2 {
-    font-size: 2.5rem;
-    font-family: 'Courier New', Courier, monospace; /* You can adjust the font here */
-    color: #fdfd96; /* Pastel yellow */
+  .title {
+    grid-column: 2 / span 1; /* Center the title between the two images */
+    background-color: rgba(128, 128, 128, 0.8); /* Light gray with transparency */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow to the gray box */
+  }
+  
+  .title h1 {
+    font-size: 3rem;
+    font-family: 'Courier New', Courier, monospace;
+    color: #fdfd96; /* Pastel yellow color */
     text-transform: uppercase;
     letter-spacing: 2px;
-    text-align: center;
-    margin: 0 20px;
-    filter: opacity(0.8); /* Washed out effect */
+    filter: opacity(0.9); /* Slightly less opacity for a washed-out look */
+    margin: 0;
   }
   
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .photo-gallery {
-      flex-direction: column;
-    }
-  
-    .photo img {
-      max-width: 100%;
-    }
-  
-    .title h2 {
-      font-size: 2rem;
-    }
+  /* Video Grid Layout for Media Sections */
+  .media-section {
+    margin-bottom: 40px;
   }
   
+  .media-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .video-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+  }
+  
+  .video {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    overflow: hidden;
+  }
+  
+  .video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  
+  /* Footer */
   footer {
     margin-top: 20px;
     padding: 10px;
     background-color: #333;
     color: #fff;
   }
+  
   
