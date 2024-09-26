@@ -1,0 +1,77 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Set background and font styles */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+  }
+  
+  header h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Flexbox layout for the photos and title */
+  .photo-gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Space between elements */
+  }
+  
+  /* Style for photos */
+  .photo img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Style for the title in the center */
+  .title h2 {
+    font-size: 2.5rem;
+    font-family: 'Courier New', Courier, monospace; /* You can adjust the font here */
+    color: #fdfd96; /* Pastel yellow */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    margin: 0 20px;
+    filter: opacity(0.8); /* Washed out effect */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .photo-gallery {
+      flex-direction: column;
+    }
+  
+    .photo img {
+      max-width: 100%;
+    }
+  
+    .title h2 {
+      font-size: 2rem;
+    }
+  }
+  
+  footer {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+  }
+  
